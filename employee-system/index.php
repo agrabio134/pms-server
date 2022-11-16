@@ -62,12 +62,10 @@
 					var eno = $('[name="eno"]').val()
 					if(eno == ''){
 						alert("Please enter your employee number");
-						console.log( "error");
 					}else{
 						
-						// $('.log_now').hide()		
-						// $('.loading').show()
-						console.log( "error");
+						$('.log_now').hide()		
+						$('.loading').show()
 						
 						$.ajax({
 							
