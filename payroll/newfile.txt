@@ -1,0 +1,12 @@
+			Salary Slip
+Employee Number: 	040120
+name: 			Agrabio
+Email: 			Agrabio@email.com
+Department: 		IT Department
+
+Gross Salary:		12,000.00
+Deduction:		1,600.00
+Bonus Overtime:		544.00
+Tax:			1,440.00
+SSS:			1,560.00
+Net Salary:		7,944.00

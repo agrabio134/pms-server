@@ -1,0 +1,42 @@
+html{
+    /* background-color: rgb(49, 84, 85); */
+}
+.login-container{
+    color: white;
+    border: 3px solid rgb(22, 22, 22);
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto auto ;
+    background-color: rgb(49, 84, 85);
+    justify-content: center;
+    
+
+}
+
+.logmain-container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logform-container{
+    background-color: rgb(58, 54, 83);
+    height: 250px;
+    width: 450px;
+    padding: 50px;
+    border-radius: 7px;
+    display: grid;
+    grid-template-columns: auto auto ;
+    align-items: center;
+}
+
+
+
+.logform-item{
+    margin: 5px;
+    padding: 2px 5px;
+}
+
+.logo{
+    margin-top: 70px;
+}
