@@ -27,7 +27,7 @@ if (isset($_POST['compute'])) {
 
     $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
 
-    $txt = "\t\t\tSalary Slip\n";
+    $txt = "\t\tSalary Slip\n";
     fwrite($myfile, $txt);
 
     $outp = $emp_num;
@@ -59,22 +59,22 @@ if (isset($_POST['compute'])) {
 
 
     $outp = number_format($g_sal, 2);
-    $txt = "Gross Salary:\t\t" . $outp . "\n";
+    $txt = "Gross Salary:\t\t ₱" . $outp . "\n";
     fwrite($myfile, $txt);
     $outp = number_format($deduction, 2);
-    $txt = "Deduction:\t\t" . $outp . "\n";
+    $txt = "Deduction:\t\t ₱" . $outp . "\n";
     fwrite($myfile, $txt);
     $outp = number_format($bonus, 2);
-    $txt = "Bonus Overtime:\t\t" . $outp . "\n";
+    $txt = "Bonus Overtime:\t\t ₱" . $outp . "\n";
     fwrite($myfile, $txt);
     $outp = number_format($tax, 2);
-    $txt = "Tax:\t\t\t" . $outp . "\n";
+    $txt = "Tax:\t\t\t ₱" . $outp . "\n";
     fwrite($myfile, $txt);
     $outp = number_format($sss, 2);
-    $txt = "SSS:\t\t\t" . $outp . "\n";
+    $txt = "SSS:\t\t\t ₱" . $outp . "\n\n";
     fwrite($myfile, $txt);
     $outp = number_format($n_sal, 2);
-    $txt = "Net Salary:\t\t" . $outp . "\n";
+    $txt = "Net Salary:\t\t ₱" . $outp . "\n";
     fwrite($myfile, $txt);
 
     fclose($myfile);

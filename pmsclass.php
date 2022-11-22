@@ -47,6 +47,28 @@ class payroll
         }
     }
 
+    public function loginEmp()
+    {
+        if (isset($_POST['submit'])) {
+
+            $email = $_POST['email'];
+            $password = md5($_POST['password']);
+            $connection = $this->openConnection();
+            $stmt = $connection->prepare("SELECT * FROM users WHERE email = ? AND password = ?");
+            $stmt->execute([$email, $password]);
+            $total = $stmt->rowCount();
+            $user = $stmt->fetch();
+            if ($total > 0) {
+
+                $this->setUserData($user);
+                header("Location: http://localhost:3005/");
+            } else {
+                echo "Login Failed";
+            }
+
+        }
+    }
+
 
     public function setUserData($array)
     {
@@ -65,6 +87,15 @@ class payroll
     }
 
     public function logout()
+    {
+        if (!isset($_SESSION)) {
+            session_start();
+        }
+        $_SESSION['users'] = null;
+        unset($_SESSION['users']);
+    }
+
+    public function logoutEmp()
     {
         if (!isset($_SESSION)) {
             session_start();

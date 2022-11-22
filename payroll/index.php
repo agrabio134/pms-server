@@ -6,7 +6,7 @@ require_once("../DbConnect.php");
 
 
 <head>
-    <link rel="stylesheet" href="./payroll-style.css">
+    <link rel="stylesheet" href="./pay-style.css">
 </head>
 
 
@@ -56,11 +56,11 @@ require_once("../DbConnect.php");
                     </div>
 
                     <div class="payroll-item"> 
-                        
+                    <a href="newfile.txt" class="btn" download> Download payslip</a>
                     </div>
 
                     <div class="payroll-item"> 
-                        <input type="submit" class="btn-compute"  name="compute" value="Compute Salary" />
+                        <input type="submit" class="btn"  name="compute" value="Compute Salary" />
                     </div>
                     
 
@@ -71,9 +71,7 @@ require_once("../DbConnect.php");
         
             </div>
              
-              <div >
-                        <a href="newfile.txt" class="btn-download" download> Download payslip</a>
-            </div>
+    
             <div class="payroll-container">
 
                 

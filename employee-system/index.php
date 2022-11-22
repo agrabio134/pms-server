@@ -5,13 +5,13 @@
 		<?php include('header.php') ?>
 	</head>
 	<body>
-		<div id="main" class="bg-info">
+		<div id="main" style="background-color: #4b4b4b;">
 		<div class = "container-fluid admin2">
 			
 			<div class="attendance_log_field">
 
 				<div id="company-logo-field" class="mb-4 ">
-					<h4>Company Logo</h4>
+					<img src="../assets/logo.png" alt="logo" class="logo">
 				</div>
 				<div class="col-md-4 offset-md-4">
 					<div class="card">

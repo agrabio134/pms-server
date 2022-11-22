@@ -9,6 +9,7 @@ div#main {
 #main .container{
 	margin:200px;
 }
+
 div#sidebar {
     width: 250px;
     height: 95.3%;
@@ -51,7 +52,7 @@ div#sidebar {
 	height: 100%
 }
 .attendance_log_field{
-	top:20%;
+	top:5%;
 	position: relative;
 }
 #company-logo-field {
@@ -63,4 +64,8 @@ div#sidebar {
 #log_display{
 	font-weight: bold;
 	font-size:17px;
+}
+
+.logo{
+	height: 250px;
 }
