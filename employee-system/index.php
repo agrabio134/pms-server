@@ -8,7 +8,6 @@
 		<div id="main" style="background-color: #4b4b4b;">
 		<div class = "container-fluid admin2">
 			
-			<div class="attendance_log_field">
 
 				<div id="company-logo-field" class="mb-4 ">
 					<img src="../assets/logo.png" alt="logo" class="logo">
@@ -44,7 +43,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
 		</div>
 	</body>
 	<script>
