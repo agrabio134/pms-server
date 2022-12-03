@@ -31,6 +31,10 @@ body {
   position: relative;
 }
 
+.slip-container{
+  display: flex;
+  flex-direction: column;
+}
 
 
 .payroll-item{

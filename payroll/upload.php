@@ -11,8 +11,10 @@ $subject = "Payslip";
 // "CC: somebodyelse@example.com";
 $fileName = basename($_FILES["file"]["name"]);
 $emp_num = $_POST["emp_number"];
-$body = "Dear ".$emp_num."
-%2C%0D%0A Here in attached your Payslip for this month";
+$body = "To Employee Number: ".$emp_num." 
+%2C%0D%0A Email Address: ".$to."
+
+%2C%0D%0A%2C%0D%0A Here in attached your Payslip for this month";
 $targetFilePath = $targetDir . $fileName;
 // echo  "<a href = ../".$targetFilePath." >download</a>";
 // $file = "test";
