@@ -1,0 +1,13 @@
+		Salary Slip
+Employee Number: 	04012020
+name: 			Just Test
+Email: 			Agrabioharvey@gmail.com
+Department: 		IT Department
+
+Gross Salary:		 ₱6,760.00
+Deduction:		 ₱1,040.00
+Bonus Overtime:		 ₱353.60
+Tax:			 ₱811.20
+SSS:			 ₱878.80
+
+Net Salary:		 ₱4,383.60

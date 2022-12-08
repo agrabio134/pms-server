@@ -18,12 +18,15 @@ class payroll
             echo "Error in connection: " . $e->getMessage();
         }
     }
+    
 
 
     public function classConnection()
     {
         $this->con = null;
     }
+
+    
 
     public function login()
     {

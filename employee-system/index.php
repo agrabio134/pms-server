@@ -30,11 +30,11 @@
 											<input type="text" id="eno" name="eno" class="form-control col-sm-12">
 										</div>
 								
-											<button type="button" class='btn btn-sm btn-primary log_now col-sm-2' data-id="1">IN AM</button>
-											<button type="button" class='btn btn-sm btn-primary log_now col-sm-2' data-id="2">OUT AM</button>
-											<button type="button" class='btn btn-sm btn-primary log_now col-sm-2' data-id="3">IN PM</button>
+											<button type="button" class='btn btn-sm btn-primary log_now col-sm-2' data-id="1">TIME IN</button>
+											<button type="button" class='btn btn-sm btn-primary log_now col-sm-2' data-id="2">TIME OUT</button>
+											<!-- <button type="button" class='btn btn-sm btn-primary log_now col-sm-2' data-id="3">IN PM</button>
 											<button type="button" class='btn btn-sm btn-primary log_now col-sm-2' data-id="4">OUT PM</button>
-										
+										 -->
 										<div class="loading" style="display: none">Please wait...</div>
 										
 									</form>

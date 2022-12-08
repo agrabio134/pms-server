@@ -4,36 +4,30 @@
 <html>
 <html lang = "eng">
 	<head>
-		<title>Attendance List | Employee Attendance Record System</title>
-		<?php include('header.php') ?>
+		<title>Attendance List | Employee System</title>
+		<meta charset = "utf-8" />
+		<link rel = "stylesheet" type = "text/css" href = "assets/css/bootstrap.min.css" />
+		<link rel = "stylesheet" type = "text/css" href = "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<link rel = "stylesheet" type = "text/css" href = "./assets/css/emp_style.css" />
+
+	<script src = "assets/js/jquery-3.5.1.min.js"></script>
+	<script src = "assets/js/bootstrap.min.js"></script>
+
 	</head>
 	<body>
-			<div class = "alert alert-primary">Attendance List</div>
-
-			<form method="POST" action="../payroll/paymain/update.php">
-		<div class="form-group">
-					<!-- <label>Employee Number</label> -->
-					<input type='text' name="employee_no"
-						id='employee_no' class='form-control'
-						placeholder='Enter Employee Number'
-						onkeyup="GetDetail(this.value)" value="">
-				</div>
-				<input type="submit" class="btn"  name="compute" value="Update Attendance" />
-
-		</form>
-			<div class = "modal fade" id = "delete" tabindex = "-1" role = "dialog" aria-labelledby = "myModallabel">
+			<div class = "alert alert-primary">Attendance Log</div>
+			<!-- <div class = "modal fade" id = "delete" tabindex = "-1" role = "dialog" aria-labelledby = "myModallabel"> -->
 				
 			</div>
 			<div class = "well col-lg-12">
 				<table id="table" class="table table-bordered table-striped">
 					<thead>
 						<tr>
-							<th>Employee Number</th>
 							<th>Name</th>
 							<th>Date</th>
 							<th>Log Type</th>
 							<th>Time</th>
-							<th>Action</th>
+							<!-- <th>Action</th> -->
 						</tr>
 					</thead>
 					<tbody>
@@ -44,7 +38,6 @@
 							
 					?>	
 						<tr>
-							<td><?php echo $row['employee_no']?></td>
 							<td><?php echo htmlentities($row['fullname'])?></td>
 							<td><?php echo date("M. D, Y", strtotime($row['datetime_log']))?></td>
 							<?php 
@@ -61,7 +54,6 @@
 							?>
 							<td><?php echo $log ?></td>
 							<td><?php echo date("h:i a", strtotime($row['datetime_log']))?></td>
-							<td><button data-id = "<?php echo $row['id']?>" class = "btn btn-sm btn-outline-danger remove_log" type="button"><i class = "fa fa-trash"></i>
 					</button>
 						</td>
 						</tr>

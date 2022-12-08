@@ -1,0 +1,13 @@
+		Salary Slip
+Employee Number: 	20202020
+name: 			Juana Dela Cruz
+Email: 			Juanadelacruz@gmail.com
+Department: 		IT Department
+
+Gross Salary:		 ₱12,300.00
+Gross Salary:		 ₱12,300.00
+Bonus Overtime:		 ₱557.60
+Tax:			 ₱1,476.00
+SSS:			 ₱1,599.00
+
+Net Salary:		 ₱9,782.60

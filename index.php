@@ -26,14 +26,25 @@ switch($method){
 
     case "PUT":
         $user = json_decode( file_get_contents('php://input') );
-        $sql = "UPDATE users SET fullname= :fullname, email =:email, department =:department, type =:type , employee_no, :employee_no WHERE id = :id";
+        $sql = "UPDATE users SET fullname = :fullname, birthdate = :birthdate, birthplace = :birthplace	,
+        address = :address, sex = :sex, citezenship = :citezenship, email =:email, password = :password, department = :department, 
+        type =:type, salary = :salary , employee_no = :employee_no WHERE id = :id";
+        
+        
         $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':id', $user->id);
-        $stmt->bindParam(':fullname', $user->fullname);
-        $stmt->bindParam(':email', $user->email);
-        $stmt->bindParam(':department', $user->department);
-        $stmt->bindParam(':type', $type);
-        $stmt->bindParam(':employee_no', $user->employee_no);
+        $stmt -> bindParam(':id', $user->id);
+        $stmt -> bindParam(':fullname',$user->fullname);
+        $stmt -> bindParam(':birthdate',$user->birthdate);
+        $stmt -> bindParam(':birthplace',$user->birthplace);
+        $stmt -> bindParam(':address',$user->address);
+        $stmt -> bindParam(':sex',$user->sex);
+        $stmt -> bindParam(':citezenship',$user->citezenship);
+        $stmt -> bindParam(':email',$user->email);
+        $stmt -> bindParam(':password',$hashedPassword);
+        $stmt -> bindParam(':department',$user->department);
+        $stmt -> bindParam(':type',$user->type);
+        $stmt -> bindParam(':salary',$user->salary);
+        $stmt -> bindParam(':employee_no',$user->employee_no);
 
         if($stmt->execute()) {
             $response = ['status' => 1, 'message' => 'Record updated successfully.'];
@@ -47,13 +58,21 @@ switch($method){
         $user = json_decode( file_get_contents('php://input') );
         $password = $user->password;
         $hashedPassword = md5($password);
-        $sql = "INSERT INTO users(id, fullname, email, password, department, type, employee_no) VALUES (null, :fullname, :email, :password, :department, :type, :employee_no)";
+        $sql = "INSERT INTO users(id, fullname, birthdate, birthplace, address, 
+        sex, citezenship, email, password, department, type, salary, employee_no) VALUES (null, :fullname,:birthdate,
+        :birthplace,:address,  :sex, :citezenship, :email, :password, :department, :type, :salary, :employee_no)";
         $stmt = $conn->prepare($sql);
         $stmt -> bindParam(':fullname',$user->name);
+        $stmt -> bindParam(':birthdate',$user->birthdate);
+        $stmt -> bindParam(':birthplace',$user->birthplace);
+        $stmt -> bindParam(':address',$user->address);
+        $stmt -> bindParam(':sex',$user->sex);
+        $stmt -> bindParam(':citezenship',$user->citezenship);
         $stmt -> bindParam(':email',$user->email);
         $stmt -> bindParam(':password',$hashedPassword);
         $stmt -> bindParam(':department',$user->department);
         $stmt -> bindParam(':type',$user->type);
+        $stmt -> bindParam(':salary',$user->salary);
         $stmt -> bindParam(':employee_no',$user->employee_no);
 
         if ($stmt->execute()) {
