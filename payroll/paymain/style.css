@@ -1,0 +1,33 @@
+
+.btn{
+    padding: 20px;
+    background-color: rgb(76, 117, 179);
+    color: white;
+}
+.btn:hover{
+    background-color: rgb(171, 204, 255);
+}
+h1{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: rgb(228, 228, 228);
+    height: 100%; 
+
+}
+.row{
+
+    background-color: rgb(228, 228, 228);
+    margin: 5px 20px;
+}
+.row-btn{
+    margin-left: 5px;
+
+}
+.row-btn-container{
+    display: flex;
+}

@@ -5,6 +5,7 @@ include '../db_connect.php';
 $days_work = $absent = $overtime = $deduction = $bonus = $rate = $g_sal = $tax = $sss = $n_sal = 0;
 
 if (isset($_POST['compute'])) {
+  // if 
 
 
     $emp_num = $_POST['employee_no'];
@@ -98,7 +99,9 @@ extract($_POST);
 		if($save_log){
 				$data['status'] = 1;
 				$data['msg'] = $employee .', your data has been recorded. <br/>' ;
-                header("location: ./index.php");
+          echo "<script>alert('Your data has been recorded.');</script>";
+          echo "<script>window.location.href='./index.php';</script>";
+        // header("location: ./index.php");
 			}
 	}else{
 		$data['status'] = 2;

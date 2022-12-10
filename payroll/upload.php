@@ -3,7 +3,7 @@
 include 'db_connect.php';
 $statusMsg = '';
 
-$targetDir = "uploads/";
+$targetDir = "./uploads";
 $to = $_POST["email"];
 $subject = "Payslip";
 
