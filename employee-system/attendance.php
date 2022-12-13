@@ -8,6 +8,17 @@
 		<?php include('header.php') ?>
 	</head>
 	<body>
+		<style>
+			.btn-up{
+				display: inline-block;
+				margin-left: 10px;
+                width: 200px;
+                text-align: center;
+                padding: 10px;
+                font-size: 16px;
+                font-weight: bold;
+			}
+		</style>
 			<div class = "alert alert-primary">Attendance List</div>
 
 			<form method="POST" action="../payroll/paymain/update.php">
@@ -18,7 +29,8 @@
 						placeholder='Enter Employee Number'
 						onkeyup="GetDetail(this.value)" value="">
 				</div>
-				<input type="submit" class="btn"  name="compute" value="Update Attendance" />
+			
+				<input type="submit" class="btn-up"  name="compute" value="Update Attendance" />
 
 		</form>
 			<div class = "modal fade" id = "delete" tabindex = "-1" role = "dialog" aria-labelledby = "myModallabel">

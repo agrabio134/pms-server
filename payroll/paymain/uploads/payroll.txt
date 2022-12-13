@@ -4,10 +4,10 @@ name: 			Just Test
 Email: 			Agrabioharvey@gmail.com
 Department: 		IT Department
 
-Gross Salary:		 ₱5,200.00
-Gross Salary:		 ₱5,200.00
+Gross Salary:		 ₱5,720.00
+Gross Salary:		 ₱5,720.00
 Bonus Overtime:		 ₱353.60
-Tax:			 ₱624.00
-SSS:			 ₱676.00
+Tax:			 ₱686.40
+SSS:			 ₱743.60
 
-Net Salary:		 ₱4,253.60
+Net Salary:		 ₱4,643.60
