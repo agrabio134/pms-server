@@ -36,11 +36,11 @@
                                         placeholder='Enter Employee Number' onkeyup="GetDetail(this.value)" value="">
                                 </div>
                                 <div class="row">
-                                    <label>Fullname:</label>
+                                    <label>Full name:</label>
                                 </div>
                                 <div class="row">
                                     <input type="text" name="fullname" id="fullname" class="form-control"
-                                        placeholder='Fullname...' value="">
+                                        placeholder='Full name...' value="" disabled>
                                 </div>
 
                                 <div class="row">
@@ -48,7 +48,7 @@
                                 </div>
                                 <div class="row">
                                     <input type="text" name="department" id="department" class="form-control"
-                                        placeholder='Department...' value="">
+                                        placeholder='Department...' value="" disabled>
                                 </div>
 
                                 <div class="row">
@@ -56,7 +56,7 @@
                                 </div>
                                 <div class="row">
                                     <input type="text" name="salary" id="salary" class="form-control"
-                                        placeholder='Daily Salary...' value="">
+                                        placeholder='Daily Salary...' value="" disabled>
                                 </div>
 
                                 <div class="row">
@@ -64,7 +64,7 @@
                                 </div>
                                 <div class="row">
                                     <input type="text" name="days_present" id="days_present" class="form-control"
-                                        placeholder='Daily Present...' value="">
+                                        placeholder='Daily Present...' value="" disabled>
                                 </div>
 
                                 <div class="row-btn-container">

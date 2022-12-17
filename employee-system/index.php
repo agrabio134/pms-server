@@ -5,6 +5,27 @@
 		<?php include('header.php') ?>
 	</head>
 	<body>
+
+	<style>
+		.btn-main{
+			display: flex;
+			width: 100%;
+			justify-content: center;
+		}
+		.btn-in{
+			display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 180px;
+            height: 40px;
+			margin: 10px 10px;
+		}
+		.btn-in:hover{
+			background-color: #4b4b4b;
+			color: white;
+		}
+
+	</style>
 		<div id="main" style="background-color: #4b4b4b;">
 		<div class = "container-fluid admin2">
 			
@@ -29,9 +50,10 @@
 											<label for="eno" class="control-label">Enter your Employee Number</label>
 											<input type="text" id="eno" name="eno" class="form-control col-sm-12">
 										</div>
-								
-											<button type="button" class='btn btn-sm btn-primary log_now col-sm-2' data-id="1">TIME IN</button>
-											<button type="button" class='btn btn-sm btn-primary log_now col-sm-2' data-id="2">TIME OUT</button>
+										<div class="btn-main">
+											<button type="button" class='btn-in log_now' data-id="1">TIME IN</button>
+											<button type="button" class='btn-in log_now' data-id="2">TIME OUT</button>
+										</div>
 											<!-- <button type="button" class='btn btn-sm btn-primary log_now col-sm-2' data-id="3">IN PM</button>
 											<button type="button" class='btn btn-sm btn-primary log_now col-sm-2' data-id="4">OUT PM</button>
 										 -->

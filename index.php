@@ -17,7 +17,7 @@ $conn = $objDb->connect();
 $method = $_SERVER['REQUEST_METHOD'];
 switch($method){
     case "GET":
-        $sql = "SELECT * FROM users";
+        $sql = "SELECT * FROM users WHERE is_archive = 0";
         $stmt = $conn -> prepare($sql);
         $stmt->execute();
         $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -25,34 +25,34 @@ switch($method){
         break;
 
     case "PUT":
-        $user = json_decode( file_get_contents('php://input') );
-        $sql = "UPDATE users SET fullname = :fullname, birthdate = :birthdate, birthplace = :birthplace	,
-        address = :address, sex = :sex, citezenship = :citezenship, email =:email, password = :password, department = :department, 
-        type =:type, salary = :salary , employee_no = :employee_no WHERE id = :id";
-        
-        
+        $sql = "UPDATE users SET is_archive = CASE
+        WHEN is_archive = 0 THEN 1 ELSE 0 END  WHERE id = :id";
+        $path = explode('/', $_SERVER['REQUEST_URI']);
+    
         $stmt = $conn->prepare($sql);
-        $stmt -> bindParam(':id', $user->id);
-        $stmt -> bindParam(':fullname',$user->fullname);
-        $stmt -> bindParam(':birthdate',$user->birthdate);
-        $stmt -> bindParam(':birthplace',$user->birthplace);
-        $stmt -> bindParam(':address',$user->address);
-        $stmt -> bindParam(':sex',$user->sex);
-        $stmt -> bindParam(':citezenship',$user->citezenship);
-        $stmt -> bindParam(':email',$user->email);
-        $stmt -> bindParam(':password',$hashedPassword);
-        $stmt -> bindParam(':department',$user->department);
-        $stmt -> bindParam(':type',$user->type);
-        $stmt -> bindParam(':salary',$user->salary);
-        $stmt -> bindParam(':employee_no',$user->employee_no);
-
+        $stmt->bindParam(':id', $path[3]);
+    
         if($stmt->execute()) {
-            $response = ['status' => 1, 'message' => 'Record updated successfully.'];
-        } else {
-            $response = ['status' => 0, 'message' => 'Failed to update record.'];
-        }
-        echo json_encode($response);
-        break;
+                $response = ['status' => 1, 'message' => 'Record archived successfully.'];
+            } else {
+                $response = ['status' => 0, 'message' => 'Failed to archived record.'];
+            }
+            echo json_encode($response);
+            break;
+        // case "PUT":
+        //         $sql = "UPDATE users SET is_archive = 1 WHERE id = :id";
+        //         $path = explode('/', $_SERVER['REQUEST_URI']);
+            
+        //         $stmt = $conn->prepare($sql);
+        //         $stmt->bindParam(':id', $path[3]);
+            
+        //         if($stmt->execute()) {
+        //                 $response = ['status' => 1, 'message' => 'Record archived successfully.'];
+        //             } else {
+        //                 $response = ['status' => 0, 'message' => 'Failed to archived record.'];
+        //             }
+        //             echo json_encode($response);
+        //             break;
         
     case "POST":
         $user = json_decode( file_get_contents('php://input') );
@@ -97,7 +97,6 @@ switch($method){
         }
         echo json_encode($response);
         break;
+
+    
 }
-
-
-
